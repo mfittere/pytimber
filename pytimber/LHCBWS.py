@@ -1,5 +1,4 @@
 import os
-from IPython.core.debugger import Tracer;
 
 try:
   import numpy as np
@@ -283,7 +282,6 @@ def _timber_to_dict(beam,plane,direction,data,db):
         emit_gauss = tb.emitnorm(sigma_gauss**2/beta,egev)*1.e-6
         emit_gauss_err = tb.emitnorm(2*sigma_gauss*sigma_gauss_err/
                                      beta,egev)*1.e-6
-      Tracer()()
       dbws[sl].append((t,tbe,gain,egev,pos,amp[idx],amp_norm,beta,emit[idx],
                        emit_gauss,emit_gauss_err,p,pcov))
   for k in dbws.keys():
